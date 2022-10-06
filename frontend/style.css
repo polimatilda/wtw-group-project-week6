@@ -1,0 +1,348 @@
+/* https://womentellwomen.com/ */
+
+* {
+    margin: 0;
+    padding: 0;
+    cursor: url("img/check2.svg"), auto;
+  }
+  
+  #preLoader {
+    background: #ef78b3;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+  }
+  
+  #number {
+    position: absolute;
+    color: #ffe5f2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+  
+  #preLoader > img {
+    width: 500px;
+    animation: rotate 50s linear infinite;
+  }
+  
+  #preLoader.loaded {
+    transition: all 1s ease;
+    opacity: 0;
+    z-index: -100;
+  }
+  
+  .header {
+    background-color: #ef78b3;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    height: 95px;
+    width: 100vw;
+    max-width: 100%;
+    color: white;
+    position: relative;
+    border-bottom: solid 1px #ffe5f2;
+  }
+  /* Header border-bottom animáció hiányzik */
+  
+  body {
+    background-color: #ef78b3;
+    overflow-x: hidden;
+  }
+  
+  .menu {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-right: 20px;
+    font-size: 18px;
+    color: #ffe5f2;
+    display: inline;
+  }
+  
+  ul {
+    list-style-type: none;
+    display: inline;
+  }
+  
+  li {
+    display: inline;
+  }
+  
+  div ul li a {
+    color: #ffe5f2;
+    padding: 2px;
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 5px;
+    display:inline-block;
+  }
+  
+  h2 { 
+    color: #ffe5f2;
+    display:inline-block;
+    font-size: 17px; 
+    margin-right: 17px;
+    animation-name: slideupmenu;
+    animation-duration: 8s;
+    animation-timing-function: ease;
+    
+  }
+  
+  h2:after {
+    display:block;
+    content: '';
+    border-bottom: solid 1px #ffe5f2;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    transform-origin:  0% 50%;
+  }
+  
+  h2:hover:after {
+    transform: scaleX(1);
+  }
+  
+  .logo {
+    position: absolute;
+    top: auto;
+    left: 50px;
+  }
+  
+  .content {
+    font-family: "Playfair Display", serif;
+    color: white;
+  }
+  
+  .wtwtext-container {
+    text-align: center;
+    top: 120px;
+    line-height: 196px;
+    z-index: 10;
+    text-transform: uppercase;
+    font-size: 230px;
+    margin: 130px auto 0 auto;
+  }
+  
+  .leftlogo {
+    position: absolute;
+    top: 250px;
+    left: -320px;
+    animation: rotate 50s linear infinite;
+    z-index: -1;
+  }
+  
+  .rightlogo {
+    position: absolute;
+    top: 250px;
+    right: -320px;
+    animation: rotate 50s linear infinite;
+    z-index: -1;
+  }
+  
+  .leftlogo > img {
+    animation: fadeIn 6s ease;
+  }
+  
+  .rightlogo > img {
+    animation: fadeIn 6s ease;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn2 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Szoveg slide up animáció */
+  
+  .wtwtext-container > div {
+    overflow: hidden;
+  }
+  
+  .wtwtext-container > div > span {
+    display: block;
+  }
+  
+  .women1 {
+    animation-name: slideUp;
+    animation-duration: 8s;
+    animation-timing-function: ease;
+  }
+  
+  .tell {
+    animation-name: slideUp2;
+    animation-duration: 8.2s;
+    animation-timing-function: ease;
+  }
+  
+  .women2 {
+    animation-name: slideUp3;
+    animation-duration: 8.4s;
+    animation-timing-function: ease;
+  }
+  
+  @keyframes slideUp {
+    0%,
+    50% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  
+    60%,
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp2 {
+    0%,
+    50% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  
+    60%,
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp3 {
+    0%,
+    50% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  
+    60%,
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideupmenu {
+    0%,
+    50% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  
+    60%,
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .underlogo-text {
+    margin: 0 auto;
+    width: 600px;
+    margin-top: 60px;
+    overflow: hidden;
+  }
+  
+  .underlogo-text > p {
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    animation-name: slideUpUnderlogo;
+    animation-duration: 7s;
+    animation-timing-function: ease;
+  }
+  
+  @keyframes slideUpUnderlogo {
+    0%,
+    50% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  
+    60%,
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .questions {
+    text-align: left;
+    font-size: 15px;
+    line-height: 80px;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 50px;
+    width: 80vw;
+    margin: 0 auto;
+    overflow: hidden;
+    
+  }
+  
+  h1:hover{
+    opacity: 0.6;
+    transition: all 0.5s ease;
+  }
+  
+  .questions > h1 {
+    border-bottom: 2px solid white;
+    transition: 0.5s;
+    display: block;
+  }
+  
+  .onScroll {
+    animation-name: slideUpQuestions;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+  }
+  
+  .arrow {
+    float: right;
+    margin-right: 70px;
+    transition: all 1s ease;
+  }
+  
+  h1:hover>.arrow{
+    margin-right: 0px;
+    transition: all 1s ease;
+  }
+  
+  @keyframes slideUpQuestions {
+    0%,
+    50% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  
+    60%,
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
